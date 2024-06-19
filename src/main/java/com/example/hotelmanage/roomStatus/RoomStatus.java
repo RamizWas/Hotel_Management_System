@@ -19,4 +19,5 @@ public class RoomStatus {
     @Column(name = "statusName", length = 100)
     private String statusName;
 
+
 }
