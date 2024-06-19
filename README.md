@@ -11,6 +11,7 @@ The Hotel Management System is designed to streamline operations for both hotel 
 
 ## Features 
 
+
 1. **Customer Management**: Register, login, and manage user profiles.
 2. **Employee Management**: Admins can manage hotel employees and staff.
 3. **Search**: Search reservations, customer info, and available rooms with details.
