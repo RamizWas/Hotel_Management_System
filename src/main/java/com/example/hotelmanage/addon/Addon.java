@@ -3,12 +3,16 @@ package com.example.hotelmanage.addon;
 import com.example.hotelmanage.booking.Booking;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Size;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Getter
 @Setter
 @Entity
+@NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "addon", schema = "hotel_booking")
 public class Addon {
     @Id

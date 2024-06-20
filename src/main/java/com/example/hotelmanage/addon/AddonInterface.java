@@ -1,7 +1,7 @@
 package com.example.hotelmanage.addon;
 
 public interface AddonInterface {
-    void createAddon(AddonDto addon);
+     AddonDto createAddon(AddonDto addon);
 
     // Read operation
     AddonDto getAddonById(int id);

@@ -27,4 +27,7 @@ public class Room {
     @Column(name = "floor")
     private Integer floor;
 
+    @Column(name = "StatusId")
+    private  Integer statusId;
+
 }

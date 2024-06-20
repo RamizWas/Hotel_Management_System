@@ -12,8 +12,8 @@ public class AddonService implements AddonInterface{
 
 
     @Override
-    public void createAddon(AddonDto addon) {
-        addonRepo.save(mapToEntity(addon));
+    public AddonDto createAddon(AddonDto addon) {
+      return   mapToDto(addonRepo.save(mapToEntity(addon)));
 
     }
 
