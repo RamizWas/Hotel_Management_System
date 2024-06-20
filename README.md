@@ -72,7 +72,7 @@ The Hotel Management System is designed to streamline operations for both hotel 
 
 ## Database Design
 
-The database design includes tables for Guest, Employees, Room, booking, Housekeeping, and Invoices. The relationships between these entities are managed using proper foreign key constraints.
+The database design includes tables for Guest, Employees, Room, booking,  and Housekeeping. The relationships between these entities are managed using proper foreign key constraints.
 
 ## API Documentation
 
