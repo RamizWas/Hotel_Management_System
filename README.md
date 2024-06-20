@@ -78,6 +78,23 @@ The database design includes tables for Guest, Employees, Room, booking, Houseke
 The API documentation follows the OAS 3.1.0 standards. The documentation includes details about each endpoint, request and response formats, and authentication requirements.
 
 
+## Postman Collection
+
+A Postman collection has been prepared to simulate the user journey on the system interface. The collection includes tests for all implemented APIs.
+
+### Import Postman Collection
+
+1. Download the Postman collection from the GitHub repository.
+2. Open Postman and import the collection.
+
+## Learnings
+
+From this project, we have learned:
+
+1. How to design and implement RESTful APIs using Spring Boot.
+2. The importance of role-based access control and security using JWT.
+3. How to create Docker images and manage services using Docker Compose.
+4. Effective use of Git for version control and collaboration.
 
 
 ## ERD 
