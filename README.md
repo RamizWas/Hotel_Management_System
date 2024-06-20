@@ -24,6 +24,61 @@ The Hotel Management System is designed to streamline operations for both hotel 
 
 
 
+## Project Structure
+
+- **Backend**: Implemented using Spring Boot.
+- **Database**: Designed based on the tutorial:
+- **Docker**: Application and database run using Docker and Docker Compose.
+- **API Documentation**: Documented using OAS 3.1.0 standards.
+- **Postman Collection**: Prepared to simulate user journeys and test all implemented APIs.
+
+## Getting Started
+
+### Prerequisites
+
+- Java 11 or higher
+- Maven
+- Docker
+- Docker Compose
+
+### Building the Application
+
+1. **Clean and Install the Project**:
+
+    ```bash
+    mvn clean install
+    ```
+
+2. **Run the Application**:
+
+    ```bash
+    java -jar target/hotel-management-system-0.0.1-SNAPSHOT.jar
+    ```
+
+### Running with Docker
+
+1. **Build the Docker Image**:
+
+    ```bash
+    docker build -t hotel-management-system .
+    ```
+
+2. **Run the Application with Docker Compose**:
+
+    ```bash
+    docker-compose up
+    ```
+
+## Database Design
+
+The database design includes tables for Guest, Employees, Room, booking, Housekeeping, and Invoices. The relationships between these entities are managed using proper foreign key constraints.
+
+## API Documentation
+
+The API documentation follows the OAS 3.1.0 standards. The documentation includes details about each endpoint, request and response formats, and authentication requirements.
+
+
+
 
 ## ERD 
 ![image](https://github.com/RamizWas/Hotel_Management_System/assets/121451794/6842e913-d1ce-41ae-9da0-b3ec502b6475)
