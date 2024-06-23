@@ -1,10 +1,17 @@
 package com.example.hotelmanage.addon;
 
+import com.example.hotelmanage.exception.BadRequestException;
+import com.example.hotelmanage.exception.ResourceNotFound;
+import com.example.hotelmanage.guest.GuestController;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 @Service
 public class AddonService implements AddonInterface{
     AddonRepo addonRepo;
+    private final Logger log = LoggerFactory.getLogger(GuestController.class);
+
 
     AddonService(AddonRepo addonRepo){
         this.addonRepo=addonRepo;
@@ -23,14 +30,27 @@ public class AddonService implements AddonInterface{
     }
 
     @Override
-    public void updateAddon(AddonDto addon) {
+    public AddonDto updateAddon(Addon addon) {
 
+    if(!addonRepo.existsById(addon.getId())){
+      log.error("addon not found, could not be updated");
+      throw new ResourceNotFound("Addon","ID",addon.getId());
+
+    }
+    return mapToDto(addonRepo.save(addon));
 
 
     }
 
     @Override
-    public void deleteAddon(int id) {
+    public boolean deleteAddon(int id) {
+
+        if(addonRepo.existsById(id)){
+            addonRepo.deleteById(id);
+            return true;
+        }
+        return false;
+
 
     }
 

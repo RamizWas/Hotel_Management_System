@@ -11,13 +11,16 @@ import java.util.List;
 
 @RestController
 @RequestMapping(path = "api/guest")
+
 public class GuestController {
     private final Logger log = LoggerFactory.getLogger(GuestController.class);
 
     private GuestService guestService;
+    private GuestRepo guestRepo;
 
-    public GuestController(GuestService guestService, GuestRepo guestRepo) {
+    public GuestController(GuestService guestService,GuestRepo guestRepo) {
         this.guestService = guestService;
+        this.guestRepo=guestRepo;
     }
 
     @GetMapping

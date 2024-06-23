@@ -16,6 +16,8 @@ public class GuestService implements GuestInterface {
 
     @Override
     public List<GuestDto> getAllGuests() {
+
+
         List<Guest> guests= guestRepo.findAll();
 
         return guests.stream().map(this::mapToDto).collect(Collectors.toList());
@@ -55,10 +57,10 @@ public class GuestService implements GuestInterface {
 
     private GuestDto mapToDto(Guest guest){
        GuestDto guestDto=new GuestDto();
-       guestDto.setId(guest.getId());
        guestDto.setEmail(guest.getEmail());
        guestDto.setPhone(guest.getPhone());
        guestDto.setFullName(guest.getFullName());
+       guestDto.setRole(guest.getRole());
        return guestDto;
 
     }

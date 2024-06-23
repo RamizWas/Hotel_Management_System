@@ -4,12 +4,17 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+
+import java.util.Collection;
+import java.util.List;
 
 @Getter
 @Setter
 @Entity
 @Table(name = "guest", schema = "hotel_booking")
-public class Guest {
+public class Guest  {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
@@ -30,5 +35,11 @@ public class Guest {
     @Size(max = 255)
     @Column(name = "password")
     private String password;
+
+    @Size(max = 255)
+    @Column(name= "role")
+    private String role;
+
+
 
 }

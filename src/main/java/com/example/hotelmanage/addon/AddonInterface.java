@@ -7,8 +7,8 @@ public interface AddonInterface {
     AddonDto getAddonById(int id);
 
     // Update operation
-    void updateAddon(AddonDto addon);
+    AddonDto updateAddon(Addon addon);
 
     // Delete operation
-    void deleteAddon(int id);
+    boolean deleteAddon(int id);
 }
