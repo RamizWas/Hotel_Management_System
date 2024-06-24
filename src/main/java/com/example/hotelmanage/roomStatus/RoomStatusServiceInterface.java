@@ -2,8 +2,8 @@ package com.example.hotelmanage.roomStatus;
 
 public interface RoomStatusServiceInterface {
     RoomStatusDto getRoomStatus(int id);
-    void deleteRoomStatus(int id);
-    RoomStatusDto updateRoomStatus(RoomStatusDto roomStatusDto);
+    boolean deleteRoomStatus(int id);
+    RoomStatusDto updateRoomStatus(RoomStatus roomStatus);
     RoomStatusDto createRoomStatus(RoomStatusDto roomStatusDto);
 
 }
