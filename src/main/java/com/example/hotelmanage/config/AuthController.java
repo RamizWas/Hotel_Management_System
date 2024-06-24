@@ -79,7 +79,6 @@ public class AuthController {
         guest.setPhone(guestDto.getPhone());
         guest.setRole(guestDto.getRole());
         guest.setEmail(guestDto.getEmail());
-        guest.setPassword(guestDto.getPassword());
         return guest;
     }
 

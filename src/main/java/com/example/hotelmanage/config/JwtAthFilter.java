@@ -59,6 +59,7 @@ public class JwtAthFilter extends OncePerRequestFilter {
 
         if(StringUtils.hasText(bearerToken) && bearerToken.startsWith("Bearer ")){
             log.info("getting jwt from request");
+            log.info(bearerToken);
 
             return bearerToken.substring(7, bearerToken.length());
         }
