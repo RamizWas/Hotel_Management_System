@@ -1,8 +1,11 @@
 package com.example.hotelmanage.booking;
 
+import java.util.List;
+
 public interface bookingServiceInterface {
     // Create a new booking
-    BookingDto createBooking(Booking booking);
+    BookingDto createBooking(BookingDto bookingDto);
+    List<BookingDto> getAllBookings();
 
     // Read a booking by its ID
     BookingDto getBookingById(int bookingId);
@@ -11,5 +14,5 @@ public interface bookingServiceInterface {
     void updateBooking(Booking booking);
 
     // Delete a booking by its ID
-    BookingDto deleteBooking(int bookingId);
+    void deleteBooking(int bookingId);
 }
