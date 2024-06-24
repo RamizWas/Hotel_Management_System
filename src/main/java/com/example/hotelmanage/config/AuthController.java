@@ -56,11 +56,13 @@ public class AuthController {
 
 
     @PostMapping("/resgister")
-    public ResponseEntity<String> registerUser(@RequestBody GuestDto guestDto){
-        if(guestRepo.existsGuestByEmail(guestDto.getEmail())){
+    public ResponseEntity<String> registerUser(@RequestBody Guest guest){
+        if(guestRepo.existsGuestByEmail(guest.getEmail())){
             return ResponseEntity.badRequest().body("Email already exists");
         }
-      Guest guest=  mapToEntity(guestDto);
+
+
+        log.error(guest.toString());
 
         guest.setPassword(passwordEncoder.encode(guest.getPassword()));
 
