@@ -100,8 +100,6 @@ From this project, we have learned:
 
 
 ## ERD 
-![image](https://github.com/RamizWas/Hotel_Management_System/assets/121451794/6842e913-d1ce-41ae-9da0-b3ec502b6475)
-
-
+![image](https://github.com/RamizWas/Hotel_Management_System/assets/121451794/e3bd370c-cae3-49f6-865c-b6a878785de4)
 
    
